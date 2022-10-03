@@ -20,4 +20,8 @@ echo $var. "<br>";
 $var1=$var1 +1;
 echo $var. "<br>";
 echo $var. "<br>";
+
+echo"<br>";
+<h2>valor y referencias</h2>
+ ""
 ?>
