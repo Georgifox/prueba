@@ -11,18 +11,13 @@
 <h1>Hola mundo</h1>
 
     <?php
-         $viernes="holamundo";
-         $$viernes="hello world";
-         echo $viernes;
-         echo "<br>";
-         echo "hola mundo en ruso";
-         echo "<br>";
-         echo $$viernes;
-         echo "<br>";
-         echo $holamundo;
-         echo "<br>";
-         $$$viernes="hola mundo en frances";
-         echo $$$viernes;
+    $es="hola mundo";
+    $en="hello world";
+    $ru="hola mundo en ruso";
+    $ita="hola mundo en italiano";
+    $fr="hola mundo en frances";
+    $idioma= $_GET['pais']
+    echo "${$idioma}";
     ?>
 
     
