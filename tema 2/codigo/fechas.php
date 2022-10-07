@@ -19,7 +19,7 @@ echo strtotime("now"), "\n";
 ?>
 
 <?php
-echo date("d/m/Y", strtotime("2022-04-10"));
+echo date("d/m/Y", strtotime("2022-04-10")); 
 strtotime("2022-04-10");
 echo "<br>";
 echo "<br>";
@@ -42,5 +42,11 @@ $fecha2= new DateTime();
 $intervalo= $fecha2->diff($fecha1);
 
 echo"<br>Años : " .$intervalo->y . " meses : " .$intervalo->m ." dias : " .$intervalo->d ;
+
+echo "<br><br><p>Hoja sucio</p>"
+echo 
+echo date("Y M D h m s"),;
+
+echo date("d m Y ",1124869800);
 
 ?>
