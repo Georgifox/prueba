@@ -43,10 +43,10 @@ $intervalo= $fecha2->diff($fecha1);
 
 echo"<br>Años : " .$intervalo->y . " meses : " .$intervalo->m ." dias : " .$intervalo->d ;
 
-echo "<br><br><p>Hoja sucio</p>"
-echo 
-echo date("Y M D h m s"),;
+echo "<br><br><p>Hoja sucio</p>";
 
-echo date("d m Y ",1124869800);
+
+$date4=date("Y-m-d", strtotime ("+ 60 days")); 
+echo $date4;
 
 ?>
