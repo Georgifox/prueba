@@ -24,18 +24,5 @@
 
 ?>
 
-<?php
 
-//ejercicio piramide asteriscos
-$filas=5;
-
-for(&blanco=1; i = $filas;$blanco++){
-    $blanco++
-    print"  ";
-    for ($i=0; $i < ; $i++) { 
-        # code...
-    }
-}
-
-?>
 
