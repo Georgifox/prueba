@@ -37,10 +37,10 @@ for( $altura = 1; $altura<=$filas; $altura++){
   
             //Asteriscos
             for($asteriscos=1; $asteriscos<=($altura*2)-1; $asteriscos++){
+                
                 if($asteriscos % 2 != 0){
                     echo"*";
                 }
-               
             }
             echo"<br>";
      } 
