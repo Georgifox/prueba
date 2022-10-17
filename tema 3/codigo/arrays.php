@@ -32,15 +32,7 @@ echo"<h2>Pedir dimensiones Matriz y rellenar</h2>";
 //crear matriz con valores insertados
 $matriz=array();
 
-$relleno=1;
-for($i=0;$i<$_GET('filas');$i++){
-    $matriz[$i][1]=$relleno;
 
-        for($j=0;$j<$$_GET('filas');$j++){
-            $matriz[$j][0]=$relleno;
-            $matriz[$i][$j]=$;
-        }
-}
 
 
 foreach ($matriz as $i=>&$valor) {
@@ -51,4 +43,11 @@ foreach ($matriz as $i=>&$valor) {
 
 //array[i,j]=array[]
 
+
+
+
+
 ?>
+
+
+
