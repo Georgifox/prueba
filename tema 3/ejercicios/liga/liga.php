@@ -57,19 +57,41 @@ echo"<tr>";
           //array_push($locales,$key);
         }
 echo"</tr>"; 
-echo"<tr>";
+
             echo"<td></td>";
     foreach ($liga as $locales => $partidos) {
+        echo"<tr>";
         echo"<th>".$locales."</th>";
-        foreach ($partidos as $visitante => $resultdo) {
-            
-        }  
+        echo"</tr>";
+            foreach($partidos as $visitante=>$resultado){
+                echo"<td></td>";
+                foreach($resultado as $goles=>$fin){
+                    echo"<th>".$goles."</th>";
+                }
+            }
     }
-echo"<tr>";  
     
 echo"</tr>"; 
 
 echo"<table>";
+
+
+
+
+/*$resultado =
+array(
+    "equipos" =>  array(
+        "puntos" => array(
+            "marcador" => "6", "Roja" => 1, "Amarilla" => 0, "Penalti" => 0
+        ),
+        "goles a favor" => array(
+            "marcador" => "4-1", "Roja" => 0, "Amarilla" => 0, "Penalti" => 0
+        ),
+        "goles en contra" => array(
+            "marcador "=> "1-2", "Roja" => 1, "Amarilla" => 1, "Penalti" => 1
+        )
+    )
+);*/
 
 
 
