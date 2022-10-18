@@ -49,7 +49,7 @@ array(
 //print_r($liga);
 
 $locales=array();
-echo"<table align='center'>";
+echo"<table border='1' align='center'>";
 echo"<tr>";
             echo"<th>Equipos</th>";
     foreach ($liga as $key => $equipos) {
@@ -58,24 +58,26 @@ echo"<tr>";
         }
 echo"</tr>"; 
 
-            echo"<td></td>";
+            
     foreach ($liga as $locales => $partidos) {
         echo"<tr>";
         echo"<th>".$locales."</th>";
-        echo"</tr>";
             foreach($partidos as $visitante=>$resultado){
-                echo"<td></td>";
+                echo"<td>";
                 foreach($resultado as $goles=>$fin){
-                    echo"<th>".$goles."</th>";
+                    echo"".$goles."";
+                    //if($locales)
                 }
+                echo"</td>";        
             }
+        
+        echo"</tr>"; 
     }
     
-echo"</tr>"; 
 
 echo"<table>";
 
-
+echo($key);
 
 
 /*$resultado =
@@ -92,6 +94,9 @@ array(
         )
     )
 );*/
+
+
+
 
 
 
