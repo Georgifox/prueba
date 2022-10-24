@@ -58,4 +58,6 @@ function saludo3($nombre){
         $objeto->lado=$lado;
     }
 
+
+
 ?>
