@@ -19,7 +19,7 @@
                     echo $_REQUEST["nombre"];
             ?>
             <?php 
-                    if vacio(()&& enviado("nombre"))
+                    if vacio(("nombre")&& enviado())
                         ?>
                         <span>RELLENA NOMBRE</span>
                         <?
@@ -84,6 +84,7 @@
             <input type="submit" value="enviar" name="enviar"><br>
 
     </form>
+    bien
 </body>
 </html>
 
