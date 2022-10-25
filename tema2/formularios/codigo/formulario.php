@@ -47,7 +47,9 @@
             <input type="radio" name="genero" id="idFemenino" value="femenino">
 
             <?php
-                if(enviado()&&vacio("genero")
+                if(enviado()&&vacio("genero"){
+
+                }
             ?>
 
             <?php
@@ -85,11 +87,3 @@
 </body>
 </html>
 
-
-<?php
-    if($_REQUEST['nombre']<= 0){
-        echo"rellena el campo";
-    }else{
-        echo"El nombre es ". $_REQUEST['nombre'];  
-    } 
-    echo "<br>";
