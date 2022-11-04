@@ -153,9 +153,7 @@
                 <input type="checkbox" name="check[]" id="idcheck6" value="op6">
                     <?php
                         if(existe("check")){
-                            if(in_array('op6',$_REQUEST['check'])){
 
-                            }
                         } 
                     ?>
 
@@ -180,7 +178,12 @@
             <input type="submit" value="enviar" name="enviar"><br>
 
 
-        
+        <?php
+            highlight_file("formulario.php");
+            if($url==1){
+                
+            }
+        ?>
     </form>
     
 </body>
