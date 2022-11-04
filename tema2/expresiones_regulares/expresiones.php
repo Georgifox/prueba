@@ -52,13 +52,33 @@ $cadena3="1000";
 $cadena4="236";
 
 echo "<br>";
-echo "<h1> match con <html> <h3> <a> </html> </h1>";
+echo "<h1>dentro de un html h3 </h1>";
 
-$patron='/^<\/?\D+\d*>/';
-$cadena='<html><h3><a></html>';
-$cadena='<h3>';
-$cadena='<a>';
-$cadena='</html>';
-//
+$patron='/^<\/?\D+\d?>/';
+$cadena='<html>dentro de un html</html><a>dentro del enlace</a><h1>dentro de un h1</h1>';
 
+preg_match_all($patron,$cadena,$array);
+foreach($array[0] as $value){
+    echo str_replace('<','&lt',$value);
+}
+
+$patron='/^[a-z]+[0-9]?>(,*)<\/[a-z]+[0-9]?>/';
+$cadena='<html>dentro de un html</html><a>dentro del enlace</a><h1>dentro de un h1</h1>';
+preg_match_all($patron,$cadena,$array);
+echo "dentro de etiqueta";
+
+echo "<br><br>";
+
+
+$lista=array("Georgi","Borisov", "24","Zamora");
+$patron= '/^\d{1,3}$/';
+$numeros= preg_grep($patron,$lista);
+print_r($numeros);
+
+
+echo "<br><br>";
+
+$sustituir= "numeros";
+$cambiado= preg_replace($patron,$sustituir,$lista);
+print_r($cambiado);
 ?>

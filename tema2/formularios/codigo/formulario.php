@@ -14,16 +14,13 @@
         <p>
             <label for="idNombre">Nombre</label>
             <input type="text" name="nombre" id="idNombre" placeholder="escribe tu nombre"
-            value=""><?php
-                if(enviado()&&!vacio("nombre"))
-                    echo $_REQUEST["nombre"];
-            ?>
-            <?php 
-                    if vacio(("nombre")&& enviado())
-                        ?>
-                        <span>RELLENA NOMBRE</span>
-                        <?
-                    
+            value="">
+             <?php
+                if(vacio("nombre")&& enviado()){
+                    ?>
+                        <span>Debe elegir genero</span>
+                    <?
+                }
             ?>
         </p>    
 
