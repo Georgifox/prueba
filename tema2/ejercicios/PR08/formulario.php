@@ -180,9 +180,7 @@
 
         <?php
             highlight_file("formulario.php");
-            if($url==1){
-                
-            }
+
         ?>
     </form>
     
