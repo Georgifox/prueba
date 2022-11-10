@@ -28,10 +28,8 @@
             <label for="idFichero">Nombre: </label>
             <input type="text" name="fichero" id="idFichero"><br>
             <input type="submit" value="Editar" onclick="this.form.action='./editaFichero.php'">
-            <?php
-                if(enviadoEditar()) editar();
-            ?>
-            <input type="submit" value="Leer">
+            
+            <input type="submit" value="Leer"onclick="this.form.action='./leeFichero.php'">
 
         </p>
     </form>

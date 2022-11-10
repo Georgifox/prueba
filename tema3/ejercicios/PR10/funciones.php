@@ -8,7 +8,7 @@
     }
 
     function editar(){
-        if(isset($_REQUEST["Editar"])){
+        if(isset($_REQUEST["editarFichero"])){
             $fp =fopen($_REQUEST['fichero'],"w");
             $escribir=$_REQUEST['areaEditar'];
             fwrite($fp,$escribir,strlen($escribir));//devuelve el numero de bytes escritos
@@ -40,6 +40,8 @@
     }
 
     function enviadoEditar(){
+        $fp =fopen($_REQUEST['fichero'],"w+b");
+        fclose($archivo);
         if(isset($_REQUEST["Editar"])){
             return false;
         }else{
