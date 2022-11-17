@@ -45,8 +45,6 @@ $imagen=$_FILES['img']; // Maria esto lo añadi luego de hacer las validaciones 
         }elseif(!empty($repetirContraseña)) {
             if(!preg_match('/^[[:upper:]]\D{1,}[[:lower:]]\D{1,}\d{1}/',$repetirContraseña)){
                 echo "<p class='error'>Rep contraseña No coicide con el patron</p>";
-            }else{
-                validarContraseñas();
             }
         }   
 

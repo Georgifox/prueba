@@ -14,9 +14,7 @@
 
 <textarea id="idAreaEditar" name="areaEditar" rows="4" cols="50"></textarea>
 <input type="button" value="Confirmar Edicion" name="editarFichero">
-<?php
-if(enviado)
-?>
+
     
 </body>
 </html>
