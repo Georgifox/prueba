@@ -1,30 +1,54 @@
 <?php
 
 
-    $nombreFichero=$_GET['fichero'];
-    echo $nombreFichero;
-
-    function vacio($nombre){
-        if(empty($_REQUEST[$nombre])){
-            return false;
-        }else{
-            return true;
-        }
-    }
-
-    function enviado($nombre){
-        if(isset($_REQUEST[$nombre])){
-            return false;
-        }else{
-            return true;
-        }
-    }
+echo $_REQUEST['fichero'];
 
 
-  if(enviado('fichero')){
-    if(vacio('editar')){
-        echo "<p class='error' >*Rellena nombre";
+if(isset($_REQUEST['editar'])){
+    $fp=fopen($_REQUEST['fichero'],"w");
+        $escribir=$_REQUEST['areaEditar'];
+        fwrite($fp,$escribir);
+        fclose($fp);
+}
+
+function leer(){
+    if(!file_exists('fichero.txt')){
+        echo"<br>NO exite";
     }else{
-        $fp=fopen("/$nombreFichero.txt","w");
+        echo"existe<br>"; 
+        if(!$fp=fopen($_REQUEST['fichero'],"r")){
+            echo "<br> ha habido un problema";
+        }else{
+                //leer fichero
+            while($lea=fgets($fp,filesize($_REQUEST['fichero']))){
+                echo "<br>";
+                $_REQUEST['areaLeer']=$lea;
+            }
+            fclose($fp);
+        }
+    } 
+}
+if(isset($_REQUEST['leer'])){
+        
+        if(!$fp=fopen($_REQUEST['leer'],"r")){
+            echo "<br> ha habido un problema";
+        }else{
+            //leer fichero
+            while($lea=fgets($fp,filesize($_REQUEST['leer']))){
+                
+                echo $lea;
+            }
+            fclose($fp);
+        }
     }
-  }
+
+
+
+
+
+    
+
+
+
+
+
