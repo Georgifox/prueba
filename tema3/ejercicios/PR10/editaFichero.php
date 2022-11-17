@@ -1,5 +1,5 @@
 <?php 
-    require("./funciones.php");
+     include("funciones.php");
 ?>
 
 <!DOCTYPE html>

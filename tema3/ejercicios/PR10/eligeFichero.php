@@ -1,3 +1,6 @@
+    <?php
+            include("funciones.php");
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,32 +13,36 @@
 </head>
 <body>
     <?php
-        if(isset($_REQUEST['enviar'])){
+        if(isset($_REQUEST['leer'])){
             if(isset($_REQUEST['fichero'])){
                 if(file_exists($_REQUEST['fichero'])){
-                    header('Location: ./leer.php?fichero='.$_REQUEST['fichero']);
+                    header('Location: ./leerFichero.php?fichero='.$_REQUEST['fichero']);
                     exit();
                 }
+                else{
+                    echo"<p class='error'>* Rellena el nombre del fichero<p>";
+                }
+            }
+            if(isset($_REQUEST['editar'])){
+                header('Location: ./editarFichero.php?fichero='.$_REQUEST['fichero']);
+                    exit();
             }
         }
+
     ?>
 
 
-    <form  method="GET">
+
+
+    <form  method="GET" action='eligeFichero.php'>
         <p> 
-            <label for="idFichero">Nombre: </label>
+            <label for="idFichero">Nombre del fichero: </label>
             <input type="text" name="fichero" id="idFichero"><br>
-            <input type="submit" value="editar" onclick="this.form.action='./editaFichero.php'">
-            <textarea id="idAreaEditar" name="areaEditar" rows="4" cols="50"></textarea>
-            <input type="button" value="Confirmar Edicion" name="editarFichero">
-
-            <input type="submit" value="Leer"onclick="this.form.action='./leeFichero.php'">
-
+            <textarea id="idAreaEditar" name="areaEditar" rows="4" cols="50" placeholder="introduce el texto del fichero"></textarea>
+            <input type="submit" value="editar"name='editar' >
+            <input type="submit" value="leer" name="leer"><br>
         </p>
 
-        <?php 
-            include("./funciones.php");
-        ?>
     </form>
 </body>
 </html>
