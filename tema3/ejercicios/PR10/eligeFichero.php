@@ -23,11 +23,12 @@
                     echo"<p class='error'>* Rellena el nombre del fichero<p>";
                 }
             }
+        }
             if(isset($_REQUEST['editar'])){
-                header('Location: ./editarFichero.php?fichero='.$_REQUEST['fichero']);
+                header('Location: ./editaFichero.php?fichero='.$_REQUEST['fichero']);
                     exit();
             }
-        }
+        
 
     ?>
 
@@ -38,7 +39,6 @@
         <p> 
             <label for="idFichero">Nombre del fichero: </label>
             <input type="text" name="fichero" id="idFichero"><br>
-            <textarea id="idAreaEditar" name="areaEditar" rows="4" cols="50" placeholder="introduce el texto del fichero"></textarea>
             <input type="submit" value="editar"name='editar' >
             <input type="submit" value="leer" name="leer"><br>
         </p>

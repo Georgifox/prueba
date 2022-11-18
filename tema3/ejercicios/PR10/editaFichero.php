@@ -11,10 +11,17 @@
     <title>Document</title>
 </head>
 <body>
+<form  method="GET" action='editaFichero.php'>
+    <input type="hidden" id="ocultoId" name="oculto">
+    <textarea id="idAreaEditar" name="areaEditar" rows="4" cols="50">
 
-<textarea id="idAreaEditar" name="areaEditar" rows="4" cols="50"></textarea>
-<input type="button" value="Confirmar Edicion" name="editarFichero">
+    <?php
+    echo $_REQUEST['fichero'];
+    ?>
 
+    </textarea>
+    <input type="button" value="Confirmar Edicion" name="editarFichero">
+</form>
     
 </body>
 </html>

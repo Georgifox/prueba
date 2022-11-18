@@ -1,15 +1,13 @@
 <?php
 
 
-echo $_REQUEST['fichero'];
 
 
 if(isset($_REQUEST['editar'])){
-    $fp=fopen($_REQUEST['fichero'],"w");
-        $escribir=$_REQUEST['areaEditar'];
-        fwrite($fp,$escribir);
-        fclose($fp);
+    $fp=fopen($_REQUEST['fichero'],'w+b');
+    fclose($fp);
 }
+
 
 function leer(){
     if(!file_exists('fichero.txt')){
@@ -41,6 +39,10 @@ if(isset($_REQUEST['leer'])){
             fclose($fp);
         }
     }
+
+
+
+
 
 
 
